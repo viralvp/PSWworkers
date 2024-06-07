@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Additional styles for hero text */
+        #heroImageContainer {
+            position: relative; /* Make the container a positioning context for absolute positioning */
+        }
+
+        #heroImageText {
+            position: absolute; /* Position the text absolutely */
+            top: 40%; /* Position the text at the vertical center */
+            left: 70%; /* Position the text at the horizontal center */
+            transform: translate(-40%, -30%); /* Center the text precisely */
+            font-size: 40px; /* Adjust the font size */
+            color: black; /* Set the text color */
+            text-align: center; /* Center-align the text */
+            padding: 12px; /* Add padding to the text */
+            border-radius: 10px; /* Add some rounded corners */
+            opacity: 0; /* Initially hide the text */
+            animation: fadeIn 2s linear forwards; /* Animation to fade in the text */ /* Initially hide the text */
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <%- include('layout/header') %>
+
+
+    <!-- Home Section -->
+    
+    <section class="psw-image">
+       
+        <img src="/images/heroImage.jpeg" alt="PSW Worker Image">
+        <div id="heroImageText" style="display: none;">Welcome to our platform! Experience quality care without the financial burden. Register now to access our services for those in need. <button id="registerbutton"><a href="/register" id="registerLink">REGISTER</a></button></div>
+    </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2>Welcome to PSW Connect</h2>
+            <p>"Welcome to PSW Connect, where we take pride in providing compassionate and dedicated Personal Support Workers (PSWs) who bring essential care directly to the comfort of your home. Our mission is to enhance the well-being and quality of life for seniors during their golden years. At PSW Connect, we understand the unique needs of the elderly, and our team of skilled PSWs is committed to delivering personalized care tailored to each individual. Whether it's assistance with daily activities, companionship, or specialized care, our services are designed to ensure that seniors can age gracefully in the familiar and cherished surroundings of their own homes. Trust PSW Connect to be your partner in promoting a fulfilling and dignified lifestyle for your loved ones."</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="Servicecontainer">
+            <h2 style="font-size: 30px; margin-top: 70px;">Services We Offer</h2>
+            <div class="card-container">
+                <!-- Card 1: Personal Care -->
+                <div class="card">
+                    <img src="/images/personalCare.jpeg" alt="Personal Care">
+                    <h3>Personal Care</h3>
+                </div>
+                <!-- Card 2: Respite Care -->
+                <div class="card">
+                    <img src="/images/respiteCare.jpeg" alt="Respite Care">
+                    <h3>Respite Care</h3>
+                </div>
+                <!-- Card 3: Assistance with Exercises -->
+                <div class="card">
+                    <img src="/images/assistanceExercises.jpeg" alt="Assistance with Exercises">
+                    <h3>Assistance with Exercises</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations">
+        <div class="container">
+            <h2 style="margin-top: 70px;font-size: 30px;">Locations We Work In</h2>
+            <!-- Placeholder for Map -->
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92718.07427028124!2d-80.5587157867546!3d43.430529434877016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf48c03ee5105%3A0x9525f8e6df5f544b!2sKitchener%2C%20ON!5e0!3m2!1sen!2sca!4v1708114491525!5m2!1sen!2sca" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                <!-- Example of embedding a map (Replace the src with your actual map link) -->
+                </div>
+        </div>
+    </section>
+
+    <%- include('layout/footer') %>
+    <script>
+        // Add text to the hero image after 5 seconds
+        setTimeout(function() {
+            document.getElementById('heroImageText').style.display = 'block';
+            document.getElementById('heroImageText').style.opacity = '10';
+        }, 1000);
+    </script>
+
+</body>
+</html>

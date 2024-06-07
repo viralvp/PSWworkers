@@ -1,0 +1,417 @@
+[{
+  "_id": {
+    "$oid": "65e4ee6df4c78b41f06d5d49"
+  },
+  "userName": "asd",
+  "user_full_name": "asd asd",
+  "serviceType": "Personal Care",
+  "locationName": "Waterloo",
+  "psw": "Ms Komal",
+  "psw_id": 7,
+  "availability": "Morning",
+  "no_of_weeks": 2,
+  "hour_per_week": 5,
+  "language": "English",
+  "weekly_charges": 150,
+  "total_charges": 300,
+  "responsibilities": "NONE",
+  "status": "pending",
+  "enrollment_date": {
+    "$date": "2024-03-03T21:41:01.452Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e4eeb720d62fa2a4b04b43"
+  },
+  "userName": "asd",
+  "user_full_name": "asd asd",
+  "serviceType": "Personal Care",
+  "locationName": "Waterloo",
+  "psw": "Ms Komal",
+  "psw_id": 7,
+  "availability": "Morning",
+  "no_of_weeks": 2,
+  "hour_per_week": 5,
+  "language": "English",
+  "weekly_charges": 150,
+  "total_charges": 300,
+  "responsibilities": "NONE",
+  "status": "pending",
+  "enrollment_date": {
+    "$date": "2024-03-03T21:42:15.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6606fd113b4a039dba699d56"
+  },
+  "id": "c6309899-2a25-41a0-865a-fb959c068e8b",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Emotional Support",
+  "locationName": "Cambridge",
+  "psw": "Mr Sam",
+  "psw_id": 1,
+  "availability": "Over Night",
+  "no_of_weeks": 3,
+  "hour_per_week": 4,
+  "language": "English",
+  "weekly_charges": 80,
+  "total_charges": 240,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T17:40:33.159Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T18:44:07.935Z"
+  },
+  "modified_by": "employee",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T18:44:07.935Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6606fe25178195dd1c0009d9"
+  },
+  "id": "0e8ac412-bd2e-414c-8da4-43703805fa22",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Nutrition Assistance",
+  "locationName": "Kitchener",
+  "psw": "Mr Sam",
+  "psw_id": 1,
+  "availability": "Evening",
+  "no_of_weeks": 10,
+  "hour_per_week": 2,
+  "language": "French",
+  "weekly_charges": 40,
+  "total_charges": 400,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-01-29T17:45:09.757Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T18:31:51.609Z"
+  },
+  "modified_by": "admin",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T18:31:51.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6606febb5487b20535f5e8cb"
+  },
+  "id": "9c50908d-da16-44a8-aee6-0580d6a0ea2b",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Respite care",
+  "locationName": "Cambridge",
+  "psw": "Mr Sam",
+  "psw_id": 1,
+  "availability": "Afternoon",
+  "no_of_weeks": 2,
+  "hour_per_week": 2,
+  "language": "English",
+  "weekly_charges": 40,
+  "total_charges": 80,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T17:47:39.751Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T18:29:33.548Z"
+  },
+  "modified_by": "employee",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T18:29:33.547Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6606ff22231c21ad6fcab3fc"
+  },
+  "id": "5fe4fadc-de0d-4a3e-86de-7fa55406d7af",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Companionship",
+  "locationName": "Kitchener",
+  "psw": "Mr Sam",
+  "psw_id": 1,
+  "availability": "Morning",
+  "no_of_weeks": 2,
+  "hour_per_week": 3,
+  "language": "English",
+  "weekly_charges": 60,
+  "total_charges": 120,
+  "responsibilities": "Home care",
+  "status": "rejected",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-01-29T17:49:22.912Z"
+  },
+  "__v": 0,
+  "modified_by": "admin",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T17:57:41.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66070eabfe169e278fcaf74c"
+  },
+  "id": "16436496-278b-438a-b178-b29bbaea3260",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Mobility Assistance",
+  "locationName": "Kitchener",
+  "psw": "Ms Riya",
+  "psw_id": 2,
+  "availability": "Evening",
+  "no_of_weeks": 3,
+  "hour_per_week": 4,
+  "language": "English",
+  "weekly_charges": 88,
+  "total_charges": 264,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T18:55:39.932Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T18:56:03.654Z"
+  },
+  "modified_by": "employee",
+  "modified_by_id": 2,
+  "modified_date": {
+    "$date": "2024-03-29T18:56:03.653Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66070f0dfe169e278fcaf75c"
+  },
+  "id": "6af5bc7d-c39f-4024-8a6a-284e6e4df9b0",
+  "userName": "userfirst",
+  "user_full_name": "userFN userLN",
+  "serviceType": "Specialized Care",
+  "locationName": "Cambridge",
+  "psw": "Ms Riya",
+  "psw_id": 2,
+  "availability": "Evening",
+  "no_of_weeks": 3,
+  "hour_per_week": 4,
+  "language": "English",
+  "weekly_charges": 88,
+  "total_charges": 264,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-01-29T18:57:17.542Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T18:57:48.414Z"
+  },
+  "modified_by": "admin",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T18:57:48.414Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66071821fe169e278fcaf771"
+  },
+  "id": "0d2ae420-43cc-4196-b6cc-afa3530ed096",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Health Care",
+  "locationName": "Waterloo",
+  "psw": "Mr Bob",
+  "psw_id": 3,
+  "availability": "Morning",
+  "no_of_weeks": 3,
+  "hour_per_week": 3,
+  "language": "English",
+  "weekly_charges": 75,
+  "total_charges": 225,
+  "responsibilities": "Home care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T19:36:01.190Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T20:20:03.975Z"
+  },
+  "modified_by": "employee",
+  "modified_by_id": 3,
+  "modified_date": {
+    "$date": "2024-03-29T20:20:03.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6607183cfe169e278fcaf77a"
+  },
+  "id": "744aa404-f0fd-4dec-8031-0c3b9c9c5a86",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Mobility Assistance",
+  "locationName": "Kitchener",
+  "psw": "Mr Bob",
+  "psw_id": 3,
+  "availability": "Evening",
+  "no_of_weeks": 4,
+  "hour_per_week": 5,
+  "language": "English",
+  "weekly_charges": 125,
+  "total_charges": 500,
+  "responsibilities": "Extra care",
+  "status": "pending",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T19:36:28.157Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66071853fe169e278fcaf783"
+  },
+  "id": "21917398-fa9f-4ff6-bab6-98db3bcac827",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Respite care",
+  "locationName": "Cambridge",
+  "psw": "Mr Bob",
+  "psw_id": 3,
+  "availability": "Evening",
+  "no_of_weeks": 4,
+  "hour_per_week": 3,
+  "language": "English",
+  "weekly_charges": 75,
+  "total_charges": 300,
+  "responsibilities": "Extra care",
+  "status": "rejected",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T19:36:51.595Z"
+  },
+  "__v": 0,
+  "modified_by": "employee",
+  "modified_by_id": 3,
+  "modified_date": {
+    "$date": "2024-03-29T20:20:58.697Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66071892fe169e278fcaf78f"
+  },
+  "id": "cbd36b69-b353-4800-983e-88378d77a70c",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Companionship",
+  "locationName": "Kitchener",
+  "psw": "Mr Bob",
+  "psw_id": 3,
+  "availability": "Over Night",
+  "no_of_weeks": 5,
+  "hour_per_week": 6,
+  "language": "English",
+  "weekly_charges": 150,
+  "total_charges": 750,
+  "responsibilities": "Home care",
+  "status": "rejected",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-01-29T19:37:54.942Z"
+  },
+  "__v": 0,
+  "modified_by": "admin",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T20:18:31.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660718a5fe169e278fcaf798"
+  },
+  "id": "61d849d6-b2b9-4e4b-b29a-513b626d2666",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Specialized Care",
+  "locationName": "Waterloo",
+  "psw": "Mr Pavan",
+  "psw_id": 5,
+  "availability": "Over Night",
+  "no_of_weeks": 5,
+  "hour_per_week": 5,
+  "language": "English",
+  "weekly_charges": 100,
+  "total_charges": 500,
+  "responsibilities": "Extra care",
+  "status": "accepted",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-01-29T19:38:13.923Z"
+  },
+  "__v": 0,
+  "enrollment_date": {
+    "$date": "2024-03-29T20:15:43.013Z"
+  },
+  "modified_by": "admin",
+  "modified_by_id": 1,
+  "modified_date": {
+    "$date": "2024-03-29T20:15:43.012Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660723648bd6f6c1fbe60711"
+  },
+  "id": "0e99976b-074b-462b-878f-547a16443fcf",
+  "userName": "sudhir",
+  "user_full_name": "Sudhir Upadhyay",
+  "serviceType": "Mobility Assistance",
+  "locationName": "Cambridge",
+  "psw": "Mr Bob",
+  "psw_id": 3,
+  "availability": "Morning",
+  "no_of_weeks": 4,
+  "hour_per_week": 5,
+  "language": "English",
+  "weekly_charges": 125,
+  "total_charges": 500,
+  "responsibilities": "Home care",
+  "status": "pending",
+  "created_by": "user",
+  "created_date": {
+    "$date": "2024-03-29T20:24:04.325Z"
+  },
+  "__v": 0
+}]

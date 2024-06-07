@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body >
+    <%- include('layout/header') %>
+    <div class="message-header">
+        <img src="/images/dashboardUser.jpeg" alt="image could not be displayed">
+    </div>
+    <h2 style="color: rgba(39, 91, 133, 0.979);">Hello, <%= fullName %> !</h2>
+    <br><br>
+    <table class="userDashboardContent">
+        <thead> 
+            <tr>
+                <th>Service Name</th>
+                <th>Location</th>
+                <th>PSW</th>
+                <th>Availability</th>
+                <th>Week Count</th>
+                <th>Hour Per Week</th>
+                <th>Weekly Charges</th>
+                <th>Total Charges</th>
+                <th>Responsibilities</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% allUserServices.forEach(service => { %>
+            <tr>
+                <td><%= service.serviceType %></td>
+                <td><%= service.locationName %></td>
+                <td><%= service.psw %></td>
+                <td><%= service.availability %></td>
+                <td><%= service.no_of_weeks %> Weeks</td>
+                <td><%= service.hour_per_week %> Hours</td>
+                <td>$<%= service.weekly_charges %></td>
+                <td>$<%= service.total_charges %></td>
+                <td><%= service.responsibilities %></td>
+                <td><%= service.status.toUpperCase() %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <%- include('layout/footer') %>
+</body>
+</html>

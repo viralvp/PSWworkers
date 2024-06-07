@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<%- include('layout/header') %>
+<section class="registerBody">
+
+<div class="registration-card">
+    <img src="/images/register.jpeg" alt="Image could not be displayedx">
+    <!-- Registration Section -->
+    <section class="containerRegister">
+        <h2>Register With Us</h2>
+    <form action="/registerUser" method="post">
+        <!-- FirstName field  -->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <% if (errors && errors.firstName) { %>
+            <span style="color: red;" class="error-message"><%= errors.firstName.msg %></span>
+        <% } %>
+
+        <!-- LastName field  -->
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <% if (errors && errors.lastName) { %>
+            <span style="color: red;" class="error-message"><%= errors.lastName.msg %></span>
+        <% } %>
+
+        <!-- Email field   -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <% if (errors && errors.email) { %>
+            <span style="color: red;" class="error-message"><%= errors.email.msg %></span>
+        <% } %>
+
+        <!-- UserName field  -->
+        <label for="username">Username:</label>
+        <input type="text" id="userName" name="userName">
+        <% if (errors && errors.userName) { %>
+            <span style="color: red;" class="error-message"><%= errors.userName.msg %></span>
+        <% } %>
+
+        <!-- Password  -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <% if (errors && errors.password) { %>
+            <span style="color: red;" class="error-message"><%= errors.password.msg %></span>
+        <% } %>
+
+         <!-- Date of Birth field -->
+         <label for="dob">Date of Birth:</label>
+         <input type="date" id="dob" name="dob" onchange="calculateAge()">
+         <% if (errors && errors.dob) { %>
+         <span style="color: red;" class="error-message"><%= errors.dob.msg %></span>
+         <% } %>
+ 
+         <!-- Age field (hidden) -->
+         <input type="hidden" id="age" name="age">
+
+        <!-- BloodGroup field -->
+        <label for="bloodGroup" id="bloodGroupLabel">Blood Group:</label>
+        <input type="text" name="bloodGroup" id="bloodGroup" >
+
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login" style="color: #52858d; font-weight: bold;">Login here</a>.</p>
+</section>
+
+
+</div>  
+
+</section>
+<%- include('layout/footer') %>
+
+
+<script>
+    function calculateAge() {
+        var dob = document.getElementById('dob').value;
+        var today = new Date();
+        var birthDate = new Date(dob);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        document.getElementById('age').value = age;
+    }
+</script>
+</html>

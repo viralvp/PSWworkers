@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Us</title>
+</head>
+<body>
+    <%- include('layout/header') %>
+
+ <!-- Meet Us Section -->
+ <section class="containerMeetUs">
+    <h2 style="color: rgb(11, 60, 79); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Meet Our Personal Support Workers</h2>
+
+    <!-- PSW Worker List -->
+    <ul class="psw-list">
+
+        <% allEmployee.forEach (employee => { %>
+            
+            <li class="psw-item">
+                <img src="/images/john.jpeg" alt="PSW 1">
+                <div class="psw-details">
+                    <h3><%= employee.name %></h3>
+                    <p style="font-weight: bold;">Age: <%= employee.age %> years</p>
+                    <p style="font-weight: bold;">Experience: <%= employee.experience %> years</p>
+                    <p style="font-weight: bold;">Ratings: <%= employee.ratings %></p>
+                    <p style="font-weight: bold;">Services: <%= employee.specialization %></p>
+                </div>
+            </li>
+            
+        <% }); %>
+
+    </ul>
+</section>
+
+
+
+    <%- include('layout/footer') %>
+</body>
+</html>

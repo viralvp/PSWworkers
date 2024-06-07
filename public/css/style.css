@@ -1,0 +1,760 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #288fbe;
+    color: white;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    box-shadow: inset -3px -1px 20px 6px rgba(243, 237, 237, 0.986);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-container img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+.tagline {
+    font-size: 30px; 
+    font-family: roboto, sans-serif;
+    FONT-WEIGHT: BOLD;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-family: roboto, sans-serif;
+    FONT-WEIGHT: BOLD;
+
+}
+header nav ul li a:hover {
+    font-weight: bold; 
+    text-decoration: none;/* Make the font bold on hover */
+    color: rgba(0, 0, 0, 0.608);
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px 5px rgba(243, 237, 237, 0.986);
+}
+
+.psw-image {
+    width: 100%;
+    height: 700px;
+    overflow: hidden; 
+    filter: blur(1.5px); 
+}
+
+.psw-image img {
+    width: 100%;    
+    object-fit: cover;
+}
+
+#registerbutton
+{
+   background-color: #e4901994;
+   font-size: 20px;
+   border-radius: 25px;
+}
+#registerLink
+{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.introduction {
+    /* background-color: #93acb051; */
+    padding: 40px 0;
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98); 
+    /* border: 10px solid #ddd;  */
+    border-radius: 3px;
+}
+/* Introduction Section Styles */
+.introduction {
+     /* background-color: #93acb051;  */
+   /* Light grey background for slight contrast */
+    padding: 40px 0; /* Add some padding around the section for spacing */
+}
+
+.introduction .container {
+    max-width: 1200px; /* Set a max-width for the content and center it */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.introduction h2 {
+    color: #333; /* Darker text color for the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-size: 30px; /* Make the heading larger */
+    text-align: center; /* Center the heading text */
+}
+
+.introduction p {
+    color: #666; /* Lighter text color for the paragraph for readability */
+    font-size: 16px; /* Set a comfortable reading font size */
+    line-height: 1.6; /* Improve line spacing for readability */
+    text-align: justify; /* Justify the paragraph text for a clean look */
+    margin-bottom: 0; /* Adjust margin as needed, here we remove the bottom margin */
+}
+
+.Servicecontainer
+{
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgba(87, 155, 197, 0.98); 
+    
+}
+
+.card {
+    flex-basis: 30%;
+    text-align: center;
+    transition: all 0.3s ease; 
+    /* border: 5px solid rgba(87, 155, 197, 0.98);  */
+    border-radius: 10px;
+    background-color: #bbd3d751;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card:hover {
+    transform: scale(1.05); /* Scale the card slightly when hovered */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+.map-placeholder {
+    width: 100%;
+    height: 420px; /* Adjust as necessary */
+    background-color: #e9e9e9; /* Placeholder style */
+    text-align: center;
+    line-height: 400px; /* Adjust based on height for vertical centering of placeholder text */
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background-color: #2196cbc2;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Ensure positioning context for absolute positioning */
+    box-shadow: inset -3px -1px 20px 6px rgba(243, 237, 237, 0.986);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 40px; 
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+}
+
+.social-icons a {
+    margin-right: 20px;
+}
+
+.social-icons img {
+    height: 30px;
+}
+.copyright{
+    margin-top: 30px;
+
+}
+
+.footer-links a, .copyright p{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: roboto, sans-serif;
+    FONT-WEIGHT: BOLD;
+}
+
+.footer-links ul li a:hover {
+    font-weight: bold;
+    text-decoration: none; 
+    color: rgba(0, 0, 0, 0.608);
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px 3px rgba(243, 237, 237, 0.986);
+}
+
+/* Login Form Styles */
+section.containerRegister {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section.containerRegister h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section.container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section.container h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Meet Us Section Styles */
+.containerMeetUs {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98);
+    max-width: 90%;
+}
+
+.containerMeetUs h2 {
+    text-align: center;
+    color: #333;
+}
+
+.psw-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.psw-item {
+    margin: 15px;
+    text-align: center;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+    border: 4px solid #17b5e1; /* Add border to each card */
+    border-radius: 10px; /* Rounded corners for the cards */
+    padding: 15px; /* Add padding to the cards */
+    width: calc(30% - 30px); /* Set width for each card, accounting for margins */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    box-shadow: 20px 10px 6px rgba(87, 155, 197, 0.98);
+}
+
+.psw-item:hover {
+    transform: scale(1.15); /* Scale the card slightly when hovered */
+}
+
+.psw-item:hover .psw-details h3 {
+    font-weight: bold; /* Make the name bold when hovered */
+}
+
+.psw-item img {
+    width: 100px; /* Reduce image size */
+    height: 100px; /* Reduce image size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.psw-details h3 {
+    margin: 0;
+    color: #2c4c62;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.psw-details p {
+    margin: 5px 0;
+    color: #2c4c62;
+    white-space: nowrap; /* Prevent services from wrapping to new lines */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowing content */
+}
+
+
+/* Additional Styles for Services Selection */
+#serviceForm {
+    margin-bottom: 20px;
+}
+
+/* Additional Styles for Locations Selection */
+#locationForm {
+    margin-bottom: 20px;
+}
+
+/* Additional Styles for Time Slot Selection */
+#timeSlotForm {
+    margin-bottom: 20px;
+}
+
+/* Additional Styles for Add Service Button */
+#addService {
+    margin-bottom: 20px;
+}
+
+/* Additional Styles for Related Workers Section */
+#relatedWorkers {
+    margin-top: 20px;
+}
+
+.relatedWorker {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.relatedWorker img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.relatedWorker h3 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.relatedWorker p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* aboutus page */
+
+.about-us-header img {
+    /* display: block; */
+
+    width: 100%; /* Make sure the image is responsive */
+    height: 400px;
+    margin-top: 5px;
+}
+
+.about-us-content {
+    background: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background for readability */
+    margin: 40px auto;
+   /* max-width: 900px;  Adjust based on your design preference */
+    padding: 20px;
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98); 
+    border-radius: 10px; /* Optional: rounds the corners */
+}
+
+.about-us-content h1{
+    text-align: center; /* Center-aligns the text */
+}
+.aboutContent
+{
+    font-size: 20px;
+}
+
+/* location page */
+
+.map-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.location-map {
+    width: 100%;
+    height: 400px;
+}
+
+.content-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center; /* Center-aligns the text */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: for better readability over a potential background */
+}
+
+ul {
+    text-align: left; /* Ensures list is left-aligned within the centered content-container */
+    margin: 0 auto; /* Centers the list */
+    padding: 0;
+    list-style-position: inside; /* Adjusts bullet points to be inside the content flow */
+}
+
+
+/* contact us page */
+
+.full-width-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+}
+
+.content-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left; /* Aligns the text to the left */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: for better readability */
+}
+
+h1, h2 {
+    text-align: center; /* Centers headings */
+}
+
+p {
+    margin-bottom: 20px; /* Adds space below paragraphs */
+}
+
+/* privacy policy page */
+
+.full-width-image {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area nicely */
+}
+
+.content-container {
+    max-width: 800px; /* Adjust based on your design */
+    margin: 20px auto; /* Centers the container with automatic margins */
+    padding: 20px; /* Padding inside the container */
+    text-align: left; /* Aligns the text to the left inside the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background for readability */
+}
+
+h2 {
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+p {
+    margin-bottom: 20px; /* Adds space below each paragraph */
+}
+
+/* login page */
+
+
+.login-card {
+    max-width: 600px; /* Adjust the width of the card as needed */
+    margin: 50px auto; /* Centers the card on the page with top and bottom margin */
+    padding: 20px;
+    background-color: white; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-radius: 8px; /* Softens the corners */
+    text-align: center; /* Centers the text inside the card */
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin: 10px 0; /* Adds some space above and below */
+    padding: 10px; /* Makes the input fields taller */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Softens the corners */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; /* Adds some space above the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* A darker blue for the hover effect */
+}
+/* registration page */
+
+
+.registration-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 40px auto; /* Center the card */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98);
+}
+/* Ensure the image takes up the left side */
+.registration-card img {
+    max-width: 40%; /* Adjust the width of the image */
+    border-radius: 10px;
+    height: 700px /* Optional: rounds the corners of the image */
+}
+/* Ensure the form elements are aligned properly */
+.containerRegister form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* Adjust input width and margin */
+.containerRegister input {
+    width: 100%; /* Ensure inputs take up full width */
+    margin: 10px 0; /* Add vertical margin between inputs */
+}
+
+/* Adjust button width */
+.containerRegister button {
+    width: 100%; /* Make the button full width */
+    margin-top: 10px; /* Add some space between button and inputs */
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], select, textarea {
+    width: 90%; /* Makes form elements take up most of the card width */
+    padding: 8px; /* Adds padding inside the form elements */
+    margin: 10px 0; /* Adds margin between form elements */
+    border: 1px solid #ccc; /* Adds border to the form elements */
+    border-radius: 4px; /* Rounds the corners of the form elements */
+}
+
+button[type="submit"] {
+    background-color: #31669f; /* Sets the button color */
+    color: white; /* Text color for the button */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darkens the button color on hover */
+}
+
+/* Adjust the layout for the registration form */
+.containerRegister {
+    width: 50%; /* Set the width for the registration form */
+    padding: 20px; /* Add padding to the form */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* message page */
+
+.message-header img
+{
+    width: 100%; /* Make sure the image is responsive */
+    height: 450px;
+}
+
+
+/* service form */
+.containerServices
+{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98);
+    margin-left: 40px;
+    margin-right: 40px; 
+}
+#serviceForm {
+    max-width: 800px; /* Adjust based on your preference */
+    margin: 0 auto; /* Centers the form */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+/* service columns */
+.service-column {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+
+/* user dashboard */
+
+.userDashboardContent {
+    border-collapse: collapse; /* Ensures borders collapse into a single border */
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the table */
+}
+
+.userDashboardContent th, .userDashboardContent td {
+    border: 4px solid #275982; /* Light gray border */
+    padding: 8px; /* Padding for spacing inside cells */
+}
+
+.userDashboardContent th {
+    background-color: rgba(53, 117, 169, 0.979); /* Blue background for header cells */
+    color: white; /* White text color */
+    text-align: left; /* Align text to the left */
+}
+
+.userDashboardContent tr:nth-child(even) {
+    background-color: rgba(176, 202, 223, 0.979) /* Zebra striping for rows */
+} 
+
+.userDashboardContent tr:hover {
+    background-color: #c1dbe4; /* Hover effect for rows */
+}
+
+.userDashboardContent th, .userDashboardContent td {
+    text-align: center; /* Center-align content within cells */
+}
+
+/* to print validation messages */
+.validation-message {
+    color: red; /* Error message text color */
+    font-size: 14px; /* Error message font size */
+    margin-top: 5px; /* Spacing between input field and error message */
+}
+
+/* admin dashboard */
+.containerAdmin
+{
+    max-width: 100%;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 50px;
+    border: 1px solid #275982; /* Light gray border */
+    box-shadow: 20px 20px 7px rgba(87, 155, 197, 0.98);
+}

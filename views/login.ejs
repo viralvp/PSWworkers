@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-background">
+    
+    <%- include('layout/header') %>
+    <div >
+    <!-- Login Section -->
+    <div class="login-card">
+        <section class="container">
+            <h2>Sign in</h2>
+            <form action="/loginUser" method="post">
+                <input type="hidden" name="loginUserType" id="loginUserType" value="user"/>
+                 <!-- Radio button container -->
+        <div class="radio-container">
+            <label for="userType">Select User Type</label><br>
+            <input type="radio" id="employee" name="userType" value="employee" onclick="getUserType('employee')">
+            <label for="employee">Employee</label>
+            <input type="radio" id="admin" name="userType" value="admin" onclick="getUserType('admin')">
+            <label for="admin">Admin</label>
+            <input type="radio" checked="true" id="user" name="userType" value="user" onclick="getUserType('user')">
+            <label for="user">User</label>
+        </div>
+                <label for="username">Username</label>
+                <input type="text" id="userName" name="userName" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit"  >Login</button>
+            </form>
+            <p id="errors" style="color: red;">
+                <% if(typeof error !== 'undefined'){ %>
+                    <%= error %>
+                <% } %>
+            </p>
+            <p>Don't have an account? <a href="/register" style="color: #52858d; font-weight: bold;">Sign up here</a>.</p>
+        </section>
+    </div>
+</div>
+
+<script>
+    
+function getUserType(userType){
+    
+    document.getElementById('loginUserType').value = userType;
+    
+}
+
+
+
+</script>
+
+</body>
+<%- include('layout/footer') %>
+</html>

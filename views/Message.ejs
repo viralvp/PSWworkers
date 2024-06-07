@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acess Denied</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('layout/header') %>
+    <div class="message-header">
+        <img src="/images/message.png" alt="image could not be displayed">
+    </div>
+    <main class="messagePage">
+
+        <% if (messageType == "requiredLogin") { %>
+            <br><br><br><br><br><br><br>
+            <p style="font-size: 30px;">In order to access this page you need to either <a href="/login">sign in</a>
+                or <a href="/register">sign up</a></p>
+       
+        <% } %>
+        <br><br><br>
+    </main>
+
+    <%- include('layout/footer') %>
+
+    

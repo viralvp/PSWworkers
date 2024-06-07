@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+</head>
+<body>
+    <%- include('layout/header') %>
+
+    <div class="containerServices">
+    <h2>Choose the Services To Opt</h2>
+    <form id="serviceForm" method="post" action="/enrollService">
+        <input type="hidden" id="userName" name="userName" value=<%= userName %> >
+        <label for="serviceType">Service Type</label>
+        <select id="serviceType" name="serviceType" required>
+            <% allService.forEach (service => { 
+                %>
+                <option value="<%= service.serviceName %>"><%= service.serviceName %></option>
+                <% }); %>
+        </select>
+        <br>
+        <label for="location">Location</label>
+        <select id="location" name="location" required>
+            <% allLocation.forEach (location => { %>
+                <option value="<%= location.locationName %>"><%= location.locationName %></option>
+                <% }); %>
+        </select>
+        <br>
+        <label for="psw">Select PSW</label>
+        <input type="hidden" id="pswWage" name="pswWage" value="" />
+        <input type="hidden" id="psw_id" name="psw_id" value="" />
+        <select id="psw" name="psw" onchange="handleWageDetails()" required>
+            <option value="" >--- Select PSW ---</option>
+            <% allPsw.forEach (psw => { %>
+                <option value="<%= psw.name %>" data-id="<%= psw.id %>"  data-wage="<%= psw.hourly_wage %>"><%= psw.name %> - (Exp. <%= psw.experience %> Years)</option>
+                <% }); %>
+        </select>
+        <br>
+        <label for="availability">Prefered Availability</label>
+        <select id="availability" name="availability">
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+            <option value="Over Night">Over Night</option>
+        </select>
+        <br>
+        <label for="hour">How many weeks you required service ?</label>
+        <input type="number" id="no_of_week" name="no_of_week" value="0" onchange="populateCharges()" required>
+        <br>
+        <label for="hour">No Of Hour per week :</label>
+        <input type="number" id="hours_per_week" name="hours_per_week" value="0" onchange="populateCharges()" required>
+        <br>
+        <label for="language">Prefered Language</label>
+        <select id="language" name="language">
+            <% allLanguage.forEach (language => { %>
+                <option value="<%= language.name %>"><%= language.name %></option>
+                <% }); %>
+        </select>
+        <br>
+        <label for="budget">Weekly Charges</label>
+        <input type="text" id="weekly_charges_show" name="weekly_charges_show" disabled value="">
+        <input type="hidden" id="weekly_charges" name="weekly_charges"  value="">
+        <br>
+        <label for="budget">Total Charges</label>
+        <input type="text" id="total_charges_show" name="total_charges_show" disabled value="">
+        <input type="hidden" id="total_charges" name="total_charges"  value="">
+        <br>
+        <label for="responsibilities">Additional Responsibility</label>
+        <input type="text" id="responsibilities" name="responsibilities" value="">
+    
+        
+        <button id="addService" type="submit">Enroll Service</button>
+    </form>
+</div>
+
+    <%- include('layout/footer') %>
+
+
+
+    <script>
+
+        function handleWageDetails() {
+            handlePswWage();
+            populateCharges();
+        }
+
+        function handlePswWage(){
+
+            var selectedOption = event.target.options[event.target.selectedIndex];
+
+            var wage = selectedOption.getAttribute('data-wage');
+            var pswId = selectedOption.getAttribute('data-id');
+
+            document.getElementById('pswWage').value = wage;
+            document.getElementById('psw_id').value = pswId;
+
+        }
+
+        function populateCharges() {
+
+            let wage = document.getElementById('pswWage').value;
+            let no_of_week = document.getElementById('no_of_week').value;
+            let hours_per_week = document.getElementById('hours_per_week').value;
+            
+            no_of_week = no_of_week === "" ? 0 : no_of_week;
+            hours_per_week = hours_per_week === "" ? 0 : hours_per_week;
+            wage = wage === "" ? 0 : wage;
+        
+            //psw seelction should be there. otherwise, below validation will trigger.
+            if (parseInt(wage) == 0) {
+                alert('Please select PSW:');
+
+                document.getElementById('weekly_charges_show').value = 0;
+                document.getElementById('total_charges_show').value = 0;
+
+                document.getElementById('weekly_charges').value = 0;
+                document.getElementById('total_charges').value = 0;
+
+                document.getElementById('psw').focus();
+                return false;
+            }
+            
+            let weekly_charges = parseInt(hours_per_week) * parseInt(wage);
+    let total_charges = weekly_charges * parseInt(no_of_week);
+
+    let formatted_weekly_charges = "$" + weekly_charges;
+    let formatted_total_charges = "$" + total_charges;
+
+    document.getElementById('weekly_charges_show').value = formatted_weekly_charges;
+    document.getElementById('total_charges_show').value = formatted_total_charges;
+
+    document.getElementById('weekly_charges').value = weekly_charges;
+    document.getElementById('total_charges').value = total_charges;
+        }
+
+    </script>
+
+</body>
+</html>

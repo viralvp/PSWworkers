@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('layout/headerEmployee') %>
+    <!-- 
+    <div class="message-header">
+      <img
+        src="/images/employeeDashboard.jpeg"
+        alt="image could not be displayed"
+      />
+    </div>
+-->
+    <section class="containerAdmin">
+      <h2 style="color: rgba(39, 91, 133, 0.979); margin-top: 30px;font-size: 40px;" >Welcome</h2>
+      <!-- Table for service ID and action -->
+
+      
+      <table class="userDashboardContent">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Service Type</th>
+            <th>Client Name</th>
+            <th>Location</th>
+            <th>More Details</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (typeof allAssignedService !== 'undefined' && allAssignedService.length > 0) { %> 
+          <% let counter = 1; %> 
+          
+          <% allAssignedService.forEach (service => { %>
+
+            <% if (service.status == 'pending') { %>
+          <tr>
+            <td><%= counter %></td>
+            <td><%= service.serviceType %></td>
+            <td><%= service.user_full_name %></td>
+            <td><%= service.locationName %></td>
+            <td>
+              <a onclick="showServiceDetails('<%= JSON.stringify(service) %>')" style="color: rgb(14, 75, 87);font-weight: bold;">Click here...</a>
+            </td>
+            <td>
+              <button class="accept-btn" onclick="acceptService('<%= service.id %>', '<%= service.psw_id %>')">Accept</button>
+            </td>
+            <td>
+              <!-- <button class="reject-btn" onclick="rejectService('<%= service.id %>', '<%= service.psw_id %>')">Reject</button> -->
+
+              <button class="reject-btn" onclick="serviceReject('<%= service.id %>', '<%= service.psw_id %>')" style="color: rgb(93, 31, 31);font-weight: bold;">Reject</button>
+            </td>
+          </tr>
+          <% counter++; %> 
+          <% }%>
+            
+          
+          <% }); %>
+
+
+
+          <% let counterAccepted = 1; %> <% allAssignedService.forEach (service => { %> 
+          <% if (service.status == 'accepted') { %>
+            <tr>
+              <td><%= counterAccepted %></td>
+              <td><%= service.serviceType %></td>
+              <td><%= service.user_full_name %></td>
+              <td><%= service.locationName %></td>
+              <td>
+                <a onclick="showServiceDetails('<%= JSON.stringify(service) %>')" style="color: rgb(14, 75, 87);font-weight: bold;">Click here...</a>
+              </td>
+              <td>
+                <button >Accepted</button>
+              </td>
+            </tr>
+            <% counterAccepted++; %>
+          <% }%>
+          
+           <% }); %>
+
+
+           <% let counterRejected = 1; %> <% allAssignedService.forEach (service => { %> 
+            <% if (service.status == 'rejected') { %>
+              <tr>
+                <td><%= counterRejected %></td>
+                <td><%= service.serviceType %></td>
+                <td><%= service.user_full_name %></td>
+                <td><%= service.locationName %></td>
+                <td>
+                  <a onclick="showServiceDetails('<%= JSON.stringify(service) %>')" style="color: rgb(14, 75, 87);font-weight: bold;">Click here...</a>
+                </td>
+                <td>
+                  <button style="color: rgb(93, 31, 31);font-weight: bold;">Rejected</button>
+                </td>
+              </tr>
+              <% counterRejected++; %>
+            <% }%>
+            
+             <% }); %>
+
+             <% } %>
+        </tbody>
+      </table>
+
+      <form id="serviceAction" method="post" action="/performServiceAction">
+        <input type="hidden" id="action" name="action" value="" />
+        <input type="hidden" id="serviceId" name="serviceId" value="" />
+        <input type="hidden" id="pswId" name="pswId" value="" />
+      </form>
+
+      <div id="serviceDetailModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalContent"></p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script>
+      function acceptService(uuid, psw_id) {
+        document.getElementById("action").value = "accepted";
+        document.getElementById("serviceId").value = uuid;
+        document.getElementById("pswId").value = psw_id;
+
+        document.getElementById("serviceAction").submit();
+      }
+
+      function serviceReject(uuid, psw_id) {
+        document.getElementById("action").value = "rejected";
+        document.getElementById("serviceId").value = uuid;
+        document.getElementById("pswId").value = psw_id;
+
+        document.getElementById("serviceAction").submit();
+      }
+
+
+      function showServiceDetails(serviceStr) {
+        const service = JSON.parse(serviceStr.replace(/&apos;/g, "'"));
+
+        // Populate your modal with service details
+        const modalContent = document.getElementById("modalContent");
+        modalContent.innerHTML = `
+          Service Type: ${service.serviceType}<br>
+          Client Name: ${service.user_full_name}<br>
+          Location: ${service.locationName}<br>
+          Availability: ${service.availability}<br>
+          Weeks: ${service.no_of_weeks}<br>
+          Hours per week: ${service.hour_per_week}<br>
+          Weekly Charges: $${service.weekly_charges}<br>
+          Total Charges: $${service.total_charges}<br>
+          Language: ${service.language}<br>
+          Responsibilities: ${service.responsibilities}<br>
+        `;
+
+        // Show the modal
+        const modal = document.getElementById("serviceDetailModal");
+        modal.style.display = "block";
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      }
+
+
+    </script>
+  </body>
+</html>

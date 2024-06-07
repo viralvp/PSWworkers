@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "65ced6761126c36b48f7e5bc"
+  },
+  "firstName": "asd",
+  "lastName": "asd",
+  "email": "asd@asd.asd",
+  "userName": "asd",
+  "password": "asd",
+  "age": 12,
+  "bloodPressure": "",
+  "heartRate": "",
+  "medicationHistory": "",
+  "allergies": "Please specify if there are any allergies?",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6606fbcd3e29fa1570c4d063"
+  },
+  "firstName": "userFN",
+  "lastName": "userLN",
+  "email": "upadhyaya@yopmail.com",
+  "userName": "userfirst",
+  "password": "userfirst",
+  "age": 46,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660713e6fe169e278fcaf769"
+  },
+  "firstName": "Sudhir",
+  "lastName": "Upadhyay",
+  "email": "user@yopmail.com",
+  "userName": "sudhir",
+  "password": "sudhir1234",
+  "age": 54,
+  "__v": 0
+}]
